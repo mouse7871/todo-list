@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f63d.svg" /> <!-- 이모지 파비콘 : https://favicon.io/emoji-favicons/ -->
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/d198c89416.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="backend/resource.json" id="resource" type="application/json"></script> -->
+    <script src="resource.js" id="resource" type="text/javascript"></script>
+    <title>Momentum Your Life!</title>
+  </head>
+  <body>
+    <div id="background"></div>
+    <script src="src/background.js"></script>
+
+    <div id="user-page">
+      <div class="clock">
+        <h2 id="clock"></h2>
+        <div id="date"></div>
+      </div>
+      <div id="menu">
+        <i class="fa-solid fa-bars menu-icon"></i>
+      </div>
+      <div id="menu-page" class="hidden">
+        <div>
+          <div id="greeting">
+            <span>Hello, </span>
+            <span class="username"></span>
+          </div>
+          <button>logout</button>
+        </div>
+        <hr />
+        <div id="todo">
+          <div id="todo-title">
+            <span>Todo List</span>
+            <!-- <span><i class="fa-solid fa-chevron-down"></i></span> -->
+          </div>
+          <ul id="todo-list"></ul>
+          <form id="todo-form">
+            <button><i class="fa-solid fa-plus"></i></button>
+            <input type="text" placeholder="Write New Todo" />
+          </form>
+        </div>
+      </div>
+      <div id="weather"></div>
+      <div id="weather-page" class="hidden"></div>
+      <div id="quote"></div>
+    </div>
+
+    <div id="login-page">
+      <form id="login-form">
+        <input
+          required
+          type="text"
+          name="username"
+          placeholder="Enter your name"
+          maxlength="15"
+        />
+        <button>Login</button>
+      </form>
+    </div>
+
+    <script src="src/weather.js"></script>
+    <script src="src/quotes.js"></script>
+    <script src="src/clock.js"></script>
+    <script src="src/todo.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>

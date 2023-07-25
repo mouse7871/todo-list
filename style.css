@@ -1,0 +1,381 @@
+:root {
+  /* Color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* Spacing */
+  --spacing-big: 30px;
+  --spacing-large: 20px;
+  --spacing-medium: 10px;
+  --spacing-small: 6px;
+  --spacing-micro: 4px;
+
+  /* Size */
+  --avatar-size: 36px;
+
+  /* Font Size */
+  --font-big: 30px;
+  --font-large: 20px;
+  --font-regular: 16px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+
+  /* Opacity */
+  --opacity-hard: 0.6;
+  --opacity-weak: 0.3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* html, body {
+  width: 100%;
+  height: 100%;
+} */
+
+#background {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#background * {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+#background div {
+  opacity: var(--opacity-hard);
+}
+
+#background img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#quote {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  margin: var(--spacing-large);
+  text-align: center;
+}
+
+#quote .quote-kor {
+  font-size: var(--font-small);
+  opacity: var(--opacity-hard);
+}
+#quote .quote-eng {
+  font-size: var(--font-micro);
+  opacity: var(--opacity-weak);
+}
+
+.hidden {
+  display: none;
+}
+
+.checked {
+  opacity: var(--opacity-hard);
+  text-decoration: line-through;
+}
+
+/* login-page */
+
+#login-page {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: var(--bg-color);
+  border-radius: var(--font-medium); */
+  position: relative;
+}
+
+#login-form {
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-60%, -60%);
+}
+
+#login-form * {
+  margin: var(--spacing-small) 0;
+}
+
+#login-form input {
+  border: 0px solid white;
+  border-bottom: 1px solid var(--main-color);
+  outline: none;
+  text-align: center;
+  padding: var(--spacing-small);
+  background-color: transparent;
+  color: var(--font-color);
+}
+#login-form input::placeholder {
+  color: var(--second-color);
+}
+
+#login-form button,
+#user-page button {
+  border: 0px solid white;
+  text-align: center;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: var(--font-medium);
+  margin-left: var(--spacing-micro);
+  padding: var(--spacing-micro) var(--spacing-medium);
+  cursor: pointer;
+}
+
+/* user-page */
+
+.username {
+  color: var(--second-color);
+}
+
+#user-page {
+  width: 100%;
+  height: 100%;
+}
+
+#user-page .clock {
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  top: 35vh;
+  opacity: var(--opacity-hard);
+}
+#user-page .clock #clock {
+  font-size: 20vh;
+}
+#user-page .clock #date {
+  font-size: var(--font-big);
+}
+
+#user-page #menu,
+#user-page #weather {
+  margin: var(--spacing-big);
+  font-size: var(--font-big);
+  cursor: pointer;
+}
+#user-page #menu-page,
+#user-page #weather-page {
+  margin: 0 calc(var(--spacing-big) + (var(--font-big) / 4));
+  margin-top: calc(var(--spacing-big) * 3);
+  padding: var(--spacing-big);
+  background-color: var(--bg-color);
+  border-radius: var(--font-medium);
+  position: fixed;
+  top: 0;
+}
+#user-page #menu-page:after {
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: calc(var(--font-big) / 2) solid transparent;
+  border-bottom: calc(var(--font-big) / 2) solid var(--bg-color);
+  content: "";
+  position: fixed;
+  top: calc(var(--spacing-big) * 3 - var(--font-big) / 2);
+  left: calc(var(--spacing-big) + (var(--font-big) / 4));
+}
+#user-page #weather-page:after {
+  border-top: 0px solid transparent;
+  border-left: calc(var(--font-big) / 2) solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: calc(var(--font-big) / 2) solid var(--bg-color);
+  content: "";
+  position: fixed;
+  top: calc(var(--spacing-big) * 3 - var(--font-big) / 2);
+  right: calc(var(--spacing-big) + (var(--font-big) / 4));
+}
+
+#user-page #menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#user-page #menu-page {
+  width: 300px;
+  border-top-left-radius: 0px;
+}
+#user-page #menu-page > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#user-page #menu-page div #greeting {
+  font-size: var(--font-regular);
+  font-weight: 900;
+  display: flex;
+}
+#user-page #menu-page div #greeting span {
+  margin-right: var(--spacing-micro);
+}
+#user-page #menu-page hr {
+  opacity: var(--opacity-weak);
+  margin: var(--spacing-medium) 0;
+}
+#user-page #menu-page #todo {
+  display: flex;
+  flex-direction: column;
+}
+#user-page #menu-page #todo #todo-title {
+  margin: var(--spacing-medium) auto;
+  margin-bottom: var(--spacing-micro);
+  font-size: var(--font-large);
+  font-weight: 700;
+}
+#user-page #menu-page #todo ul#todo-list {
+  margin: var(--spacing-small);
+}
+#user-page #menu-page #todo ul#todo-list li {
+  width: 100%;
+  margin: var(--spacing-micro) 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#user-page #menu-page #todo ul#todo-list li form {
+  flex-grow: 1;
+}
+#user-page #menu-page #todo ul#todo-list li form input#todo-box {
+  width: 100%;
+  background-color: transparent;
+  border: 0 solid white;
+  outline: none;
+  color: var(--font-color);
+  font-size: var(--font-medium);
+}
+#user-page
+  #menu-page
+  #todo
+  ul#todo-list
+  li
+  form
+  input#todo-box:focus:not(.checked) {
+  color: var(--second-color);
+}
+#user-page #menu-page #todo ul#todo-list li input#todo-check {
+  flex-grow: 0;
+  margin: 0;
+  margin-right: var(--spacing-medium);
+  padding: 0;
+  cursor: pointer;
+}
+#user-page #menu-page #todo ul#todo-list li i {
+  margin-left: var(--spacing-medium);
+  cursor: pointer;
+  color: var(--red-color);
+}
+#user-page #menu-page #todo #todo-form {
+  margin: var(--spacing-small) 0;
+  padding: var(--spacing-small) var(--spacing-medium);
+  background-color: var(--second-color);
+  color: var(--main-color);
+  font-size: var(--font-medium);
+  border-radius: var(--font-medium);
+  display: flex;
+  justify-content: space-between;
+}
+#user-page #menu-page #todo #todo-form input {
+  outline: none;
+  border: 0 solid white;
+  background-color: transparent;
+  font-size: var(--font-medium);
+  margin-left: var(--spacing-small);
+  color: var(--main-color);
+  flex-grow: 1;
+}
+#user-page #menu-page #todo #todo-form input::placeholder {
+  color: var(--main-color);
+  opacity: var(--opacity-hard);
+}
+#user-page #menu-page #todo #todo-form button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+#user-page #weather {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: var(--second-color);
+}
+#user-page #weather-page {
+  width: 250px;
+  border-top-right-radius: 0px;
+  right: 0;
+}
+#user-page #weather-page > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+#user-page #weather-page .temp {
+  font-size: var(--font-big);
+  font-weight: 700;
+}
+#user-page #weather-page .city {
+  font-size: var(--font-regular);
+  font-weight: 700;
+  /* margin-bottom: var(--spacing-micro); */
+}
+#user-page #weather-page .describe {
+  font-size: var(--font-small);
+  font-weight: 300;
+  color: var(--second-color);
+}
+
+@media (max-width: 800px) {
+  #user-page .clock #clock {
+    font-size: 15vh;
+  }
+  #user-page .clock #date {
+    font-size: var(--font-large);
+  }
+  #user-page #menu,
+  #user-page #weather {
+    margin: var(--spacing-large);
+    font-size: var(--font-large);
+  }
+  #user-page #menu-page,
+  #user-page #weather-page {
+    width: 270px;
+    margin: calc(var(--spacing-large) + (var(--font-large) / 4));
+    margin-top: calc(var(--spacing-large) * 3);
+    padding: var(--spacing-large);
+  }
+  #user-page #menu-page:after {
+    border-right: calc(var(--font-large) / 2) solid transparent;
+    border-bottom: calc(var(--font-large) / 2) solid var(--bg-color);
+    top: calc(var(--spacing-large) * 3 - var(--font-large) / 2);
+    left: calc(var(--spacing-large) + (var(--font-large) / 4));
+  }
+  #user-page #weather-page:after {
+    border-left: calc(var(--font-large) / 2) solid transparent;
+    border-bottom: calc(var(--font-large) / 2) solid var(--bg-color);
+    top: calc(var(--spacing-large) * 3 - var(--font-large) / 2);
+    right: calc(var(--spacing-large) + (var(--font-large) / 4));
+  }
+}
