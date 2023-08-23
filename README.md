@@ -2,7 +2,7 @@
 
 - [Momentum](https://momentumdash.com/) Clone by using **Vanilla JavaScript**.
 - If you login, You can access **Clock, Weather,** and something **Awesome quotes**'s information.
-- Even you can manage your **Todo List**!
+- Even you can manage(CRUD) your **Todo List**!
 - And also little **Rresponsive web design** applied.
 - Please enjoy my Web!😊
 
