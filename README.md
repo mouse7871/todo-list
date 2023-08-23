@@ -6,4 +6,5 @@
 - And also little **Rresponsive web design** applied.
 - Please enjoy my Web!😊
 
+## [😍 Thank You NICO!!](https://nomadcoders.co/community/thread/8098)
 ## [🏠 Site Link](https://mouse7871.github.io/todo-list-web/)
