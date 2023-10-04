@@ -31,8 +31,8 @@ def get_quote_by_naver(search="명언"):
 
 
 def get_photo_by_unsplash(search="wallpapers"):
-    access_key = "5MRzYx8c5dnpcEhtmqRNqZ4bVRgD2uLbrKH3kKr9JNk"
-    secret_key = "3suzB98n-6x9FHZ3REybt9-EB_Sv6udEsIuoMKeLM8A"
+    access_key = ""
+    secret_key = ""
 
     results = []
     for page in range(1, 51):
